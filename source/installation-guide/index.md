@@ -22,27 +22,6 @@ The following ports open for the Gluu Server to run. Please keep the ports open 
 
 The minimum recommended heap for tomcat server is 3GB for a test instance of Gluu Server Community Edition (CE). This estimate is based on the minumum RAM requirements. It is best to keep this ratio when tomcat memory is allocated in production environments as the size will depend on the available RAM; as an example, a 6GB tomcat memory heap in a production server with 8 GB ram is ideal for a small organization running Gluu CE.
 
-### Alter Tomcat Memory Heap
-
-The tomcat heap memory is set from the `setup.py` script prompt. 
-![tomcat-prompt](../img/oxtrust/tomcat-prompt.png)
-
-This property can also altered from the `/opt/tomcat/conf/gluuTomcatWrapper.conf` file inside the Gluu Server chroot container setting `wrapper.java.initmemory` and `wrapper.java.maxmemory` properties.
-Use the following command to open the gluuTomcatWrapper file
-```
-# vi /opt/tomcat/conf/gluuTomcatWrapper.conf
-```
-
-Please change the values in following parameters. This example is taken from a CentOS installation of Gluu Server.
-
-```
-# Initial Java Heap Size (in MB)
-wrapper.java.initmemory=512
-
-# Maximum Java Heap Size (in MB)
-wrapper.java.maxmemory=1536
-```
-
 ## File Descriptor
 Gluu recommends setting the `file descriptors` to 65k for Gluu Server CE. The following steps will help set the `file descriptor` limit.
 
@@ -168,5 +147,3 @@ GRUB_SERIAL_COMMAND="serial --speed=19200 --unit=0 --word=8 --parity=no --stop=1
 # update-grub
 # reboot
 ```
-
-

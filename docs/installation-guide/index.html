@@ -200,12 +200,6 @@
               </a>
             </li>
             
-              <li class="anchor">
-              <a title="Alter Tomcat Memory Heap" href="#alter-tomcat-memory-heap">
-                  <font size=2><i>Alter Tomcat Memory Heap</i></font>
-              </a>
-            </li>
-             
           
             <li class="anchor">
               <a title="File Descriptor" href="#file-descriptor">
@@ -258,42 +252,6 @@
   <li>
     <a class="" title="Setup Script Options" href="setup_py/">
       Setup Script Options
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Cluster with CE" href="cluster/">
-      Cluster with CE
-    </a>
-    
-  </li>
-                  
-      
-    </ul>
-  </li>
-                  
-          
-            
-  <li>
-    <span class="section">Upgrade/Patch Guide</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="Upgrade Gluu Server" href="../upgrade/">
-      Upgrade Gluu Server
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Patch Gluu Server" href="../upgrade/update/">
-      Patch Gluu Server
     </a>
     
   </li>
@@ -481,8 +439,8 @@
       
         
   <li>
-    <a class="" title="Troubleshooting & FAQ" href="../admin-guide/faq/">
-      Troubleshooting & FAQ
+    <a class="" title="FAQ & Troubleshooting" href="../admin-guide/faq/">
+      FAQ & Troubleshooting
     </a>
     
   </li>
@@ -552,22 +510,6 @@
 </table>
 <h2 id="tomcat-memory-heap">Tomcat Memory Heap<a class="headerlink" href="#tomcat-memory-heap" title="Permanent link">#</a></h2>
 <p>The minimum recommended heap for tomcat server is 3GB for a test instance of Gluu Server Community Edition (CE). This estimate is based on the minumum RAM requirements. It is best to keep this ratio when tomcat memory is allocated in production environments as the size will depend on the available RAM; as an example, a 6GB tomcat memory heap in a production server with 8 GB ram is ideal for a small organization running Gluu CE.</p>
-<h3 id="alter-tomcat-memory-heap">Alter Tomcat Memory Heap<a class="headerlink" href="#alter-tomcat-memory-heap" title="Permanent link">#</a></h3>
-<p>The tomcat heap memory is set from the <code>setup.py</code> script prompt. 
-<img alt="tomcat-prompt" src="./../img/oxtrust/tomcat-prompt.png" /></p>
-<p>This property can also altered from the <code>/opt/tomcat/conf/gluuTomcatWrapper.conf</code> file inside the Gluu Server chroot container setting <code>wrapper.java.initmemory</code> and <code>wrapper.java.maxmemory</code> properties.
-Use the following command to open the gluuTomcatWrapper file</p>
-<pre><code># vi /opt/tomcat/conf/gluuTomcatWrapper.conf
-</code></pre>
-
-<p>Please change the values in following parameters. This example is taken from a CentOS installation of Gluu Server.</p>
-<pre><code># Initial Java Heap Size (in MB)
-wrapper.java.initmemory=512
-
-# Maximum Java Heap Size (in MB)
-wrapper.java.maxmemory=1536
-</code></pre>
-
 <h2 id="file-descriptor">File Descriptor<a class="headerlink" href="#file-descriptor" title="Permanent link">#</a></h2>
 <p>Gluu recommends setting the <code>file descriptors</code> to 65k for Gluu Server CE. The following steps will help set the <code>file descriptor</code> limit.</p>
 <ul>
