@@ -12,13 +12,14 @@ the system administrators involved. Connect provides the same type of
 scalable infrastructure for authentication and authorization, and promises to define a base level domain
 identification.
 
-## Jargon (taxonomy)
+## OpenID Connect Implicit Flows
+This flow is used only for user-agent based clients--primarily JavaScript--where you cannot hide a client secret, so client authentication makes no sense. The main difference between the OAuth and OpenID Connect implicit flows is the use of the *id_token*, which provides extra contextual information about the subject and authentication event. Properly validated, the *id_token* also adds additional security to the transaction. For example, the *nonce* can be verified, and the *at_hash* can be used to check the integrity of the returned token. For more information, read the [OpenID Connect Implicit Client Implementer's guide](http://openid.net/specs/openid-connectimplicit-1_0.html).
 
-If you are familiar with SAML, there are many parallels in OpenID
-Connect, but the jargon (or "taxonomy") is different. For example,
-instead of attributes, we have "user claims". Instead of Service
-Provider (SP), we have "client". Instead of Identity Provider (IdP), it
-is an OpenID Provider (OP).
+## OpenID Connect Authorization Code Flows
+The OpenID Connect Authorization Code Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. The authorization code flow is more secure than the implicit flow because the tokens are never exposed to the web browser and because the client is authenticated. As with the implicit flow, the id_token should be validated and adds extra security over an OAuth2 code flow.
+
+## OpenID Connect Hybrid Flows 
+Hybrid flow is one of the least understood Connect features, but it's really not that bad. The `response_type` for hybrid flow always includes code, plus either token, `id_token`, or both. The hybrid flow can be used to achieve higher security levels--by returning the `id_token` from the authorization endpoint, the client can verify the integrity of the code by verifying the `id_token` claim `c_hash`. The most logical hybrid flow `response_type` is `code id_token`. You can also get back and access token from the authorization endpoint in the hybrid flow.
 
 ## Discovery 
 

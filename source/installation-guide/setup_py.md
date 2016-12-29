@@ -13,7 +13,7 @@ Enter maximum RAM for tomcat in MB [3072] :
 Optional: enter password for oxTrust and LDAP superuser [hlE3vzf0hMdD] :
 Install oxAuth OAuth2 Authorization Server? [Yes] :
 Install oxTrust Admin UI? [Yes] :
-Install LDAP? [Yes] :
+Install LDAP Server? [Yes] :
 Install Apache HTTPD Server [Yes] :
 Install Shibboleth SAML IDP? [Yes] :
 Install Asimba SAML Proxy? [Yes] :
@@ -21,11 +21,15 @@ Install CAS? [Yes] :
 Install oxAuth RP? [Yes] :
 Install Passport? [Yes]
 ```
+!!! Login
+    Please log in using the username `admin` and the password from the setup script promtpt e.g `hlE3vzf0hMdD`
 
-It is recommended to use `hostname.domain` structure for hostname and refrain from using `127.x.x.x` for IP address. 
-If you are not using a resolvable DNS host, you will need to add the hostname to your hosts file on the server which is running your browser. Login with the default user name `admin` and the password printed back in the confirmation (also contained in `setup.properties.last` (use the Unix command `grep --color -i pass` to find the according line quickly) and look for the LDAP password which is the same as the admin password.
+If a resolvable DNS host is not used, then it must be added to the hostname of the Operating System  hosts file on the server running the browser.
 
-Make sure you remove or encrypt setup.properties.last It has the clear text passwords for everything: *LDAP, admin user, keystores, and 3DES salt*. If something goes wrong, check `setup.log` for a detailed step-by-step of the installation. As an alternative you may check the file `setup_errors.log` to just see the errors (or stderr output from the scripts).
+!!! Note
+    Please remove or encrypt the setup.properties.last file as it contains the clear text passwords for *LDAP, admin user, keystores, and 3DES salt*.
+
+The errors can be found the the `setup_errors.log` file and a detailed step by step installation is found in the `setup.log` file under the `/install/community-edition-setup` folder.
 
 !!! warning
     Use a FQDN (fully qualified domain name) as hostname and refrain from using 127.0.0.1 as IP address

@@ -8,5 +8,5 @@ read text
 echo "Entered Task: $text"
 
 git add -A
-git commit -m "updated site Chris - $text"
+git commit -m "updated site & - $text"
 git push origin master

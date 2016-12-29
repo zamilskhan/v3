@@ -261,8 +261,8 @@
       
         
   <li>
-    <a class="" title="Configuring Multi-Factor Authentication" href="../../admin-guide/multi-factor-auth/">
-      Configuring Multi-Factor Authentication
+    <a class="" title="Multi-Factor Authentication" href="../../admin-guide/multi-factor-auth/">
+      Multi-Factor Authentication
     </a>
     
   </li>
@@ -270,8 +270,8 @@
       
         
   <li>
-    <a class="" title="Manage & Configure Users" href="../../admin-guide/user-group/">
-      Manage & Configure Users
+    <a class="" title="User Management" href="../../admin-guide/user-group/">
+      User Management
     </a>
     
   </li>
@@ -288,8 +288,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage OpenID Clients" href="../../admin-guide/clients/">
-      Configure and Manage OpenID Clients
+    <a class="" title="OpenID Clients" href="../../admin-guide/clients/">
+      OpenID Clients
     </a>
     
   </li>
@@ -297,8 +297,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage SAML SSO" href="../../admin-guide/saml/">
-      Configure and Manage SAML SSO
+    <a class="" title="SAML SSO" href="../../admin-guide/saml/">
+      SAML SSO
     </a>
     
   </li>
@@ -396,15 +396,6 @@
       
         
   <li>
-    <a class="" title="Fine Tuning Gluu Server" href="../../admin-guide/fine-tuning/">
-      Fine Tuning Gluu Server
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
     <a class="" title="FAQ & Troubleshooting" href="../../admin-guide/faq/">
       FAQ & Troubleshooting
     </a>
@@ -441,7 +432,7 @@ Enter maximum RAM for tomcat in MB [3072] :
 Optional: enter password for oxTrust and LDAP superuser [hlE3vzf0hMdD] :
 Install oxAuth OAuth2 Authorization Server? [Yes] :
 Install oxTrust Admin UI? [Yes] :
-Install LDAP? [Yes] :
+Install LDAP Server? [Yes] :
 Install Apache HTTPD Server [Yes] :
 Install Shibboleth SAML IDP? [Yes] :
 Install Asimba SAML Proxy? [Yes] :
@@ -450,9 +441,16 @@ Install oxAuth RP? [Yes] :
 Install Passport? [Yes]
 </code></pre>
 
-<p>It is recommended to use <code>hostname.domain</code> structure for hostname and refrain from using <code>127.x.x.x</code> for IP address. 
-If you are not using a resolvable DNS host, you will need to add the hostname to your hosts file on the server which is running your browser. Login with the default user name <code>admin</code> and the password printed back in the confirmation (also contained in <code>setup.properties.last</code> (use the Unix command <code>grep --color -i pass</code> to find the according line quickly) and look for the LDAP password which is the same as the admin password.</p>
-<p>Make sure you remove or encrypt setup.properties.last It has the clear text passwords for everything: <em>LDAP, admin user, keystores, and 3DES salt</em>. If something goes wrong, check <code>setup.log</code> for a detailed step-by-step of the installation. As an alternative you may check the file <code>setup_errors.log</code> to just see the errors (or stderr output from the scripts).</p>
+<div class="admonition login">
+<p class="admonition-title">Login</p>
+<p>Please log in using the username <code>admin</code> and the password from the setup script promtpt e.g <code>hlE3vzf0hMdD</code></p>
+</div>
+<p>If a resolvable DNS host is not used, then it must be added to the hostname of the Operating System  hosts file on the server running the browser.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please remove or encrypt the setup.properties.last file as it contains the clear text passwords for <em>LDAP, admin user, keystores, and 3DES salt</em>.</p>
+</div>
+<p>The errors can be found the the <code>setup_errors.log</code> file and a detailed step by step installation is found in the <code>setup.log</code> file under the <code>/install/community-edition-setup</code> folder.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Use a FQDN (fully qualified domain name) as hostname and refrain from using 127.0.0.1 as IP address</p>

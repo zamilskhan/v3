@@ -240,8 +240,8 @@
       
         
   <li>
-    <a class="" title="Configuring Multi-Factor Authentication" href="../multi-factor-auth/">
-      Configuring Multi-Factor Authentication
+    <a class="" title="Multi-Factor Authentication" href="../multi-factor-auth/">
+      Multi-Factor Authentication
     </a>
     
   </li>
@@ -249,8 +249,8 @@
       
         
   <li>
-    <a class="" title="Manage & Configure Users" href="../user-group/">
-      Manage & Configure Users
+    <a class="" title="User Management" href="../user-group/">
+      User Management
     </a>
     
   </li>
@@ -267,8 +267,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage OpenID Clients" href="../clients/">
-      Configure and Manage OpenID Clients
+    <a class="" title="OpenID Clients" href="../clients/">
+      OpenID Clients
     </a>
     
   </li>
@@ -276,8 +276,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage SAML SSO" href="../saml/">
-      Configure and Manage SAML SSO
+    <a class="" title="SAML SSO" href="../saml/">
+      SAML SSO
     </a>
     
   </li>
@@ -317,8 +317,17 @@
     </a>
     
       
+        
+      
       
         <ul>
+          
+            <li class="anchor">
+              <a title="Attrubute in oxTrust" href="#attrubute-in-oxtrust">
+                <b>Attrubute in oxTrust</b>
+              </a>
+            </li>
+            
           
         </ul>
       
@@ -382,15 +391,6 @@
       
         
   <li>
-    <a class="" title="Fine Tuning Gluu Server" href="../fine-tuning/">
-      Fine Tuning Gluu Server
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
     <a class="" title="FAQ & Troubleshooting" href="../faq/">
       FAQ & Troubleshooting
     </a>
@@ -412,9 +412,9 @@
       <article class="article">
         <div class="wrapper">
           
-            <h1>Attribute Management</h1>
-          
-          <p>An <em>Active</em> attribute list can be seen from the Configuration &gt;
+          <h1 id="saml-attribute">SAML Attribute<a class="headerlink" href="#saml-attribute" title="Permanent link">#</a></h1>
+<h2 id="attrubute-in-oxtrust">Attrubute in oxTrust<a class="headerlink" href="#attrubute-in-oxtrust" title="Permanent link">#</a></h2>
+<p>An <em>Active</em> attribute list can be seen from the Configuration &gt;
 Attributes section.</p>
 <p><img alt="Attribute Menu" src="../../img/admin-guide/attribute/admin_attribute_menu.png" /></p>
 <p>The Gluu Server has a large LDAP tree which includes all standard
@@ -426,7 +426,7 @@ link.</p>
 status to active/inactive, to an attribute after clicking on it.</p>
 <p><img alt="Attributes" src="../../img/admin-guide/attribute/admin_attribute_attribute.png" /></p>
 <p>Additional attributes can be added from the Gluu Server GUI, oxTrust, by
-clicking the <strong>Add Attribute</strong> button. Then, the following screen will
+clicking the <strong>Register Attribute</strong> button. Then, the following screen will
 appear:</p>
 <p><img alt="Add Attribute Screen" src="../../img/admin-guide/attribute/admin_attribute_add.png" /></p>
 <ul>
@@ -481,6 +481,55 @@ appear:</p>
   the attribute in IdP.</p>
 </li>
 </ul>
+<p>## Custom NameID
+  Gluu Server comes with the <code>transientID</code> attribute which is the default <code>NameID</code>.
+  If there are other <code>NameID</code> requirements, it is possible to create them as well.
+  The custom attribute must be created in oxTrust first before defining it as the <code>NameID</code>.
+  Please see the <a href="#using-oxtrust">oxTrust custom attribute guide</a> to create the custom attribute in oxTrust.</p>
+<p>## Defining NameID
+  The template file for <code>NameID</code> definitions are located in the <code>attribute-resolver.xml.vm</code> file under <code>/opt/tomcat/conf/shibboleth2/</code>.
+  The example below adds <code>testcustomattribute</code> as <code>NameID</code> based on UID attribute. The following are put into the <code>attribute-resolver.xml.vm</code> file.</p>
+<ul>
+<li>Add declaration for the new attribute
+  <code>if( ! ($attribute.name.equals('transientId') or $attribute.name.equals('testcustomattribute') ) )</code></li>
+<li>Add definition for the new attribute</li>
+</ul>
+<pre><code> &lt;resolver:AttributeDefinition id=&quot;testcustomattribute&quot; xsi:type=&quot;Simple&quot;
+                              xmlns=&quot;urn:mace:shibboleth:2.0:resolver:ad&quot;
+                              sourceAttributeID=&quot;uid&quot;&gt;
+
+        &lt;resolver:Dependency ref=&quot;siteLDAP&quot;/&gt;
+        &lt;resolver:AttributeEncoder xsi:type=&quot;SAML2StringNameID&quot;
+                                xmlns=&quot;urn:mace:shibboleth:2.0:attribute:encoder&quot;
+                                nameFormat=&quot;urn:oasis:names:tc:SAML:2.0:nameid-format:persistent&quot; /&gt;
+&lt;/resolver:AttributeDefinition&gt; 
+</code></pre>
+
+<ul>
+<li>Restart Jetty service</li>
+</ul>
+<h1 id="openid-connect-scopes">OpenID Connect Scopes<a class="headerlink" href="#openid-connect-scopes" title="Permanent link">#</a></h1>
+<p>In OpenID Connect, scopes are used to group attributes, and to provide a human 
+understandable description of the attributes. This improves usability when you need 
+to prompt a person to approve the disclosure of attributes to a third party.
+An example of the default Gluu Server authorization request can be seen
+here:</p>
+<p><img alt="OpenID Connect Scope Authorization Screenshot" src="../../img/admin-guide/attribute/authz_screenshot.png" /></p>
+<p>So if you have custom attributes, you may need to define a custom OpenID Scope.
+This is pretty easy to do using the oxTrust user interface, and you can just
+select the attributes that you previously registered.</p>
+<p>The scopes menu is under the <code>OpenID Connect</code> button in the oxTrust menu. The scope menu has the search functionality to search the available scopes and an <code>Add Scope</code> button.</p>
+<p><img alt="scope-menu" src="../../img/admin-guide/attribute/scope-menu.png" /></p>
+<p>The <code>Add Scope</code> button will bring the following interface.</p>
+<p><img alt="add-scope" src="../../img/admin-guide/attribute/add-scope.png" /></p>
+<ul>
+<li>Display Name: The name of the scope which will be displayd when searched</li>
+<li>Description: A small description of the scope being defined</li>
+<li>Scope Type: Default, if the scope needs the option to be released by default. Other options are LDAP, Dynamic, and OpenID.</li>
+<li>Default Scope: True if the scope is released to clients by default. </li>
+</ul>
+<p>The claims are added by clicking on the <strong>Add Claim</strong> button.</p>
+<p><img alt="add-claim" src="../../img/admin-guide/attribute/add-claim.png" /></p>
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using

@@ -240,8 +240,8 @@
       
         
   <li>
-    <a class="" title="Configuring Multi-Factor Authentication" href="../multi-factor-auth/">
-      Configuring Multi-Factor Authentication
+    <a class="" title="Multi-Factor Authentication" href="../multi-factor-auth/">
+      Multi-Factor Authentication
     </a>
     
   </li>
@@ -249,8 +249,8 @@
       
         
   <li>
-    <a class="" title="Manage & Configure Users" href="../user-group/">
-      Manage & Configure Users
+    <a class="" title="User Management" href="../user-group/">
+      User Management
     </a>
     
   </li>
@@ -267,8 +267,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage OpenID Clients" href="../clients/">
-      Configure and Manage OpenID Clients
+    <a class="" title="OpenID Clients" href="../clients/">
+      OpenID Clients
     </a>
     
   </li>
@@ -276,8 +276,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage SAML SSO" href="../saml/">
-      Configure and Manage SAML SSO
+    <a class="" title="SAML SSO" href="../saml/">
+      SAML SSO
     </a>
     
   </li>
@@ -374,26 +374,6 @@
         
       
       
-        <ul>
-          
-            <li class="anchor">
-              <a title="oxAuth" href="#oxauth">
-                <b>oxAuth</b>
-              </a>
-            </li>
-            
-          
-        </ul>
-      
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Fine Tuning Gluu Server" href="../fine-tuning/">
-      Fine Tuning Gluu Server
-    </a>
     
   </li>
                   
@@ -449,7 +429,7 @@ are available in the <code>/etc/certs</code> folder.</p>
 </tr>
 <tr>
 <td>asimba.key</td>
-<td>shibIDP.jsk</td>
+<td>shibIDP.jks</td>
 <td>httpd.key</td>
 <td>openldap.key</td>
 </tr>
@@ -466,16 +446,23 @@ are available in the <code>/etc/certs</code> folder.</p>
 <td>openldap.pem</td>
 </tr>
 <tr>
-<td>asimbaIDP.jsk</td>
-<td>shibIDP.pkcs12</td>
+<td>asimbaIDP.jks</td>
+<td>shibIDP.pkcs</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="oxauth">oxAuth<a class="headerlink" href="#oxauth" title="Permanent link">#</a></h2>
-<p><code>oxauth-web-keys.json</code> is being used by Gluu's OpenID Connect &amp; UMA
- server.</p>
+<p>The certificates for <code>Passport</code> authenticaiton are <code>passport-rp.jks, passport-rp.pem, passport-rs.jks</code>. The SCIM certificate is named <code>scim-rs.jks</code> and the OTP certificate is named <code>otp_configuration.json</code>.</p>
+<p>Additionally the following <code>json</code> files are avaibale which are used in different custom scripts for multi-factor authentication.</p>
+<ul>
+<li>cert_creds.json</li>
+<li>duo_creds.json</li>
+<li>gplus_client_secrets.json</li>
+<li>otp_configuration.json</li>
+<li>oxauth-keys.json</li>
+<li>super_gluu_creds.json</li>
+</ul>
 <h1 id="updating-apache-certificate">Updating Apache Certificate<a class="headerlink" href="#updating-apache-certificate" title="Permanent link">#</a></h1>
 <p>The certificates require manual update from <code>/etc/certs/</code> folder. </p>
 <div class="admonition warning">
@@ -484,7 +471,7 @@ are available in the <code>/etc/certs</code> folder.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please backup your full <code>/etc/certs</code> directory and <code>cacerts</code> file before updating certificates.</p>
+<p>Please backup your full <code>/etc/certs</code> directory and <code>cacerts</code> file under <code>/etc/pki/java/</code> folder before updating certificates.</p>
 </div>
 <p>Please follow these steps shown below to update the Apache SSL cert:</p>
 <ul>
@@ -541,14 +528,14 @@ are available in the <code>/etc/certs</code> folder.</p>
     </div>
     <div class="next">
       
-        <a href="../fine-tuning/" title="Fine Tuning Gluu Server">
+        <a href="../faq/" title="FAQ & Troubleshooting">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Fine Tuning Gluu Server
+                FAQ & Troubleshooting
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

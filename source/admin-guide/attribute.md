@@ -1,3 +1,5 @@
+# SAML Attribute
+## Attrubute in oxTrust
 An *Active* attribute list can be seen from the Configuration >
 Attributes section.
 
@@ -16,7 +18,7 @@ status to active/inactive, to an attribute after clicking on it.
 ![Attributes](/img/admin-guide/attribute/admin_attribute_attribute.png)
 
 Additional attributes can be added from the Gluu Server GUI, oxTrust, by
-clicking the **Add Attribute** button. Then, the following screen will
+clicking the **Register Attribute** button. Then, the following screen will
 appear:
 
 ![Add Attribute Screen](/img/admin-guide/attribute/admin_attribute_add.png)
@@ -56,3 +58,64 @@ appear:
 
 * _Status:_ The status, when selected active, will release and publish
   the attribute in IdP.
+
+  ## Custom NameID
+  Gluu Server comes with the `transientID` attribute which is the default `NameID`.
+  If there are other `NameID` requirements, it is possible to create them as well.
+  The custom attribute must be created in oxTrust first before defining it as the `NameID`.
+  Please see the [oxTrust custom attribute guide](#using-oxtrust) to create the custom attribute in oxTrust.
+
+  ## Defining NameID
+  The template file for `NameID` definitions are located in the `attribute-resolver.xml.vm` file under `/opt/tomcat/conf/shibboleth2/`.
+  The example below adds `testcustomattribute` as `NameID` based on UID attribute. The following are put into the `attribute-resolver.xml.vm` file.
+
+  * Add declaration for the new attribute
+  ```
+  if( ! ($attribute.name.equals('transientId') or $attribute.name.equals('testcustomattribute') ) )
+  ```
+  * Add definition for the new attribute
+```
+ <resolver:AttributeDefinition id="testcustomattribute" xsi:type="Simple"
+                              xmlns="urn:mace:shibboleth:2.0:resolver:ad"
+                              sourceAttributeID="uid">
+
+        <resolver:Dependency ref="siteLDAP"/>
+        <resolver:AttributeEncoder xsi:type="SAML2StringNameID"
+                                xmlns="urn:mace:shibboleth:2.0:attribute:encoder"
+                                nameFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" />
+</resolver:AttributeDefinition> 
+```
+* Restart Jetty service
+
+# OpenID Connect Scopes
+
+In OpenID Connect, scopes are used to group attributes, and to provide a human 
+understandable description of the attributes. This improves usability when you need 
+to prompt a person to approve the disclosure of attributes to a third party.
+An example of the default Gluu Server authorization request can be seen
+here:
+
+![OpenID Connect Scope Authorization Screenshot](../img/admin-guide/attribute/authz_screenshot.png)
+
+So if you have custom attributes, you may need to define a custom OpenID Scope.
+This is pretty easy to do using the oxTrust user interface, and you can just
+select the attributes that you previously registered.
+
+The scopes menu is under the `OpenID Connect` button in the oxTrust menu. The scope menu has the search functionality to search the available scopes and an `Add Scope` button.
+
+![scope-menu](../img/admin-guide/attribute/scope-menu.png)
+
+The `Add Scope` button will bring the following interface.
+
+![add-scope](../img/admin-guide/attribute/add-scope.png)
+
+* Display Name: The name of the scope which will be displayd when searched
+* Description: A small description of the scope being defined
+* Scope Type: Default, if the scope needs the option to be released by default. Other options are LDAP, Dynamic, and OpenID.
+* Default Scope: True if the scope is released to clients by default. 
+
+The claims are added by clicking on the **Add Claim** button.
+
+![add-claim](../img/admin-guide/attribute/add-claim.png)
+
+

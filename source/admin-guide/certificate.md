@@ -8,14 +8,21 @@ are available in the `/etc/certs` folder.
 |---------------|---------------|---------------|---------------|
 |asimba.crt	|shibIDP.crt	|httpd.crt	|openldap.crt	|
 |asimba.csr	|shibIDP.csr	|https.csr	|openldap.csr	|
-|asimba.key	|shibIDP.jsk	|httpd.key	|openldap.key	|
+|asimba.key	|shibIDP.jks	|httpd.key	|openldap.key	|
 |asimba.key.orig|shibIDP.key	|httpd.key.orig	|openldap.key.orig|
 |asimba.pkcs12	|shibIDP.key.orig|		|openldap.pem	|
-|asimbaIDP.jsk	|shibIDP.pkcs12	|
+|asimbaIDP.jks	|shibIDP.pkcs	|		|		|
 
-## oxAuth
-`oxauth-web-keys.json` is being used by Gluu's OpenID Connect & UMA
- server.
+The certificates for `Passport` authenticaiton are `passport-rp.jks, passport-rp.pem, passport-rs.jks`. The SCIM certificate is named `scim-rs.jks` and the OTP certificate is named `otp_configuration.json`.
+
+Additionally the following `json` files are avaibale which are used in different custom scripts for multi-factor authentication.
+
+* cert_creds.json
+* duo_creds.json
+* gplus_client_secrets.json
+* otp_configuration.json
+* oxauth-keys.json
+* super_gluu_creds.json
 
 # Updating Apache Certificate
 The certificates require manual update from `/etc/certs/` folder. 
@@ -24,7 +31,7 @@ The certificates require manual update from `/etc/certs/` folder.
     The private key cannot be password protected, and the public key must be base64 X.509. 
 
 !!! Note
-    Please backup your full `/etc/certs` directory and `cacerts` file before updating certificates.
+    Please backup your full `/etc/certs` directory and `cacerts` file under `/etc/pki/java/` folder before updating certificates.
 
 
 Please follow these steps shown below to update the Apache SSL cert:

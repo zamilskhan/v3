@@ -240,8 +240,8 @@
       
         
   <li>
-    <a class="" title="Configuring Multi-Factor Authentication" href="../multi-factor-auth/">
-      Configuring Multi-Factor Authentication
+    <a class="" title="Multi-Factor Authentication" href="../multi-factor-auth/">
+      Multi-Factor Authentication
     </a>
     
   </li>
@@ -249,8 +249,8 @@
       
         
   <li>
-    <a class="" title="Manage & Configure Users" href="../user-group/">
-      Manage & Configure Users
+    <a class="" title="User Management" href="../user-group/">
+      User Management
     </a>
     
   </li>
@@ -269,64 +269,15 @@
         <ul>
           
             <li class="anchor">
-              <a title="Log Levels" href="#log-levels">
-                <b>Log Levels</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="System logs" href="#system-logs">
-                  <font size=2><i>System logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Web Server logs" href="#web-server-logs">
-                  <font size=2><i>Web Server logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Core Gluu Server logs" href="#core-gluu-server-logs">
-                  <font size=2><i>Core Gluu Server logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="SAML transaction related logs" href="#saml-transaction-related-logs">
-                  <font size=2><i>SAML transaction related logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="LDAP logs" href="#ldap-logs">
-                  <font size=2><i>LDAP logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Miscellaneous logs" href="#miscellaneous-logs">
-                  <font size=2><i>Miscellaneous logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="To escalate the log levels" href="#to-escalate-the-log-levels">
-                  <font size=2><i>To escalate the log levels</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="System Logs" href="#system-logs_1">
-                <b>System Logs</b>
+              <a title="View Log File" href="#view-log-file">
+                <b>View Log File</b>
               </a>
             </li>
             
           
             <li class="anchor">
-              <a title="Web Server logs" href="#web-server-logs_1">
-                <b>Web Server logs</b>
+              <a title="Setup Logs" href="#setup-logs">
+                <b>Setup Logs</b>
               </a>
             </li>
             
@@ -349,41 +300,36 @@
               </a>
             </li>
              
+          
+            <li class="anchor">
+              <a title="Log Levels" href="#log-levels">
+                <b>Log Levels</b>
+              </a>
+            </li>
+            
               <li class="anchor">
-              <a title="Wrapper logs" href="#wrapper-logs">
-                  <font size=2><i>Wrapper logs</i></font>
+              <a title="System logs" href="#system-logs">
+                  <font size=2><i>System logs</i></font>
               </a>
             </li>
              
               <li class="anchor">
-              <a title="Cache Refresh logs" href="#cache-refresh-logs">
-                  <font size=2><i>Cache Refresh logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="CAS logs" href="#cas-logs">
-                  <font size=2><i>CAS logs</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Asimba logs" href="#asimba-logs">
-                  <font size=2><i>Asimba logs</i></font>
+              <a title="Web Server logs" href="#web-server-logs">
+                  <font size=2><i>Web Server logs</i></font>
               </a>
             </li>
              
           
             <li class="anchor">
-              <a title="SAML logs" href="#saml-logs">
-                <b>SAML logs</b>
+              <a title="System Logs" href="#system-logs_1">
+                <b>System Logs</b>
               </a>
             </li>
             
           
             <li class="anchor">
-              <a title="LDAP logs" href="#ldap-logs_1">
-                <b>LDAP logs</b>
+              <a title="Web Server logs" href="#web-server-logs_1">
+                <b>Web Server logs</b>
               </a>
             </li>
             
@@ -396,8 +342,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage OpenID Clients" href="../clients/">
-      Configure and Manage OpenID Clients
+    <a class="" title="OpenID Clients" href="../clients/">
+      OpenID Clients
     </a>
     
   </li>
@@ -405,8 +351,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage SAML SSO" href="../saml/">
-      Configure and Manage SAML SSO
+    <a class="" title="SAML SSO" href="../saml/">
+      SAML SSO
     </a>
     
   </li>
@@ -504,15 +450,6 @@
       
         
   <li>
-    <a class="" title="Fine Tuning Gluu Server" href="../fine-tuning/">
-      Fine Tuning Gluu Server
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
     <a class="" title="FAQ & Troubleshooting" href="../faq/">
       FAQ & Troubleshooting
     </a>
@@ -535,11 +472,176 @@
         <div class="wrapper">
           
           <h1 id="gluu-server-logs">Gluu Server Logs<a class="headerlink" href="#gluu-server-logs" title="Permanent link">#</a></h1>
-<p>When it comes to troubleshooting issues in the Gluu Server--from service hiccups to outages--logs are the best place to start. </p>
-<p>The Gluu Server administrator can investigate logs from the oxTrust <a href="../../oxtrust/configuration.md/#view-log-file">View Logs</a> feature or directly with SSH access to the Gluu-Server container. </p>
-<p>Gluu Server logs can be found in the following locations:</p>
+<p>When it comes to troubleshooting issues in the Gluu Server-from service hiccups to outages-logs are the best place to start. </p>
+<p>The Gluu Server administrator can investigate logs from the oxTrust <a href="../oxtrust-ui/#view-log-file">View Logs</a> feature or directly with SSH access to the Gluu-Server container. </p>
+<h2 id="view-log-file">View Log File<a class="headerlink" href="#view-log-file" title="Permanent link">#</a></h2>
+<p>The log files configured in the earlier section can be viewed using the
+<strong>View log file</strong> feature. This feature can be accessed through the
+configuration menu using <strong>Configuration --&gt; View Log File</strong>.</p>
+<p><img alt="view-log" src="../../img/admin-guide/logs/view-log.png" /></p>
+<p>The <strong>Display last lines count</strong> field contains the lines that will be
+displayed in the Web GUI. If the field contains the value <strong>400</strong>, then
+the Gluu Server will show the last 400 lines of the log in the GUI. The
+screenshot below shows an according example.</p>
+<p><img alt="tail-log" src="../../img/admin-guide/logs/tail-log.png" /></p>
+<h2 id="setup-logs">Setup Logs<a class="headerlink" href="#setup-logs" title="Permanent link">#</a></h2>
+<p>The setup logs are stored inside the <code>/install/community-edition-setup/</code> folder. There are two logs available, one detailing the setup process and the other documenting the errors:</p>
+<ol>
+<li>setup.log</li>
+<li>setup_error.log</li>
+</ol>
+<h2 id="core-logs">Core logs<a class="headerlink" href="#core-logs" title="Permanent link">#</a></h2>
+<p>The available log files for Gluu Server Community Edition inside the <code>chroot</code> environment are listed below.</p>
+<table>
+<thead>
+<tr>
+<th>Log File</th>
+<th>Component</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>/install/community-edition-setup</em>/<strong>setup.log</strong></td>
+<td>Setup detail log</td>
+</tr>
+<tr>
+<td>/install/community-edition-setup_/<strong>setup_error.log</strong></td>
+<td>Setup error log</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/idp/logs</em>/<strong>start.log</strong></td>
+<td>Logs time-stamp when IDP starts</td>
+</tr>
+<tr>
+<td><em>/opt/shibboleth-idp/logs</em>/<strong>idp-warn.log</strong><br/><em>/opt/shibboleth-idp/logs</em>/<strong>idp-process.log</strong></td>
+<td>IDP diagonostic log <a href="https://wiki.shibboleth.net/confluence/display/IDP30/LoggingConfiguration">Read more..</a></td>
+</tr>
+<tr>
+<td><em>/opt/shibboleth-idp/logs</em>/<strong>idp-audit.log</strong></td>
+<td>General audit log <a href="https://wiki.shibboleth.net/confluence/display/IDP30/LoggingConfiguration">Read more..</a></td>
+</tr>
+<tr>
+<td><em>/opt/shibboleth-idp/logs</em>/<strong>idp-consent-audit.log</strong></td>
+<td>Consent audit log <a href="https://wiki.shibboleth.net/confluence/display/IDP30/LoggingConfiguration">Read more..</a></td>
+</tr>
+<tr>
+<td><em>/opt/gluu/node/passport/node_modules/redis-parser</em>/<strong>isolate-0x3615b50-v8.log</strong><br/><em>/opt/gluu/node/passport/node_modules/redis-parser</em>/<strong>isolate-0x28e7b50-v8.log</strong></td>
+<td>Passport log</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/asimba/logs</em>/<strong>start.log</strong></td>
+<td>Logs time-stamp when ASIMBA starts</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/oxauth/logs</em>/<strong>start.log</strong></td>
+<td>Logs time-stamp when oxAuth starts</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/oxauth/logs</em>/<strong>oxauth_audit.log</strong></td>
+<td>General audit log</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/oxauth/logs</em>/<strong>oxauth_persistence.log</strong></td>
+<td>Logs connection with LDAP</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/oxauth/logs</em>/<strong>oxauth_script.log</strong></td>
+<td>Logs for oxAuth custom script execution</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/oxauth/logs</em>/<strong>oxauth.log</strong></td>
+<td>General log for oxAuth service</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/oxauth-rp/logs</em>/<strong>start.log</strong></td>
+<td>Logs time-stamp when oxAuthRP starts</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/oxauth-rp/logs</em>/<strong>oxauth-rp.log</strong></td>
+<td>General oxAuthRP log</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/identity/logs</em>/<strong>start.log</strong></td>
+<td>Logs time-stamp when oxTrust starts</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/identity/logs</em>/<strong>oxtrust_script.log</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/identity/logs</em>/<strong>oxtrust.log</strong></td>
+<td>Logs for oxTrust custom script execution</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/identity/logs</em>/<strong>oxtrust_persistence.log</strong></td>
+<td>Logs connection with LDAP</td>
+</tr>
+<tr>
+<td><em>/opt/gluu/jetty/identity/logs</em>/<strong>oxtrust_cache_refresh.log</strong></td>
+<td>Logs events relating to cache refresh</td>
+</tr>
+<tr>
+<td><em>/var/log/openldap</em>/<strong>ldap.log</strong></td>
+<td>OpenLDAP Log, contains everything related to OpenLDAP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="oxauth-logs">oxAuth logs<a class="headerlink" href="#oxauth-logs" title="Permanent link">#</a></h3>
+<p>The oxauth logs contain the information about oxAuth authentication process and errors. The key oxauth logs are</p>
+<ol>
+<li>
+<p><code>oxauth.log</code> under <code>/opt/gluu/jetty/oxauth/logs/</code>
+This log is gathering most of the authentication related information. Generally this is the first log to review for any authentication-related troubleshooting, like authentication failure or missing clients etc. Here's an example showing a successful user authentication:</p>
+<pre><code>2016-07-16 15:43:28,232 INFO  [org.xdi.oxauth.auth.Authenticator] Authentication success for Client: '@!EFCB.890F.FB6C.2603!0001!0A49.F454!0008!F047.7275'
+2016-07-16 15:43:28,232 TRACE [org.xdi.oxauth.auth.Authenticator] Authentication successfully for '@!EFCB.890F.FB6C.2603!0001!0A49.F454!0008!F047.7275'
+2016-07-16 15:43:28,238 DEBUG [xdi.oxauth.token.ws.rs.TokenRestWebServiceImpl] Attempting to request access token: grantType = authorization_code, code = 61ba3c0d-42c4-4f1f-8420-fd5f6707f1b1, redirectUri = https://test.gluu.org/identity/authentication/authcode, username = null, refreshToken = null, clientId = null, ExtraParams = {grant_type=[Ljava.lang.String;@1add2a62, redirect_uri=[Ljava.lang.String;@2e0995b5, code=[Ljava.lang.String;@7743b5af}, isSecure = true, codeVerifier = null
+2016-07-16 15:43:28,249 DEBUG [org.xdi.oxauth.service.UserService] Getting user information from LDAP: userId = zico
+</code></pre>
+</li>
+<li>
+<p><code>oxauth_script.log</code> under <code>/opt/gluu/jetty/oxauth/logs/</code>
+Most of the custom script's initialization and few more information are loaded here in this script. In the sample log below we can see 'Super Gluu' 2FA has been loaded in the Gluu Server:</p>
+<pre><code>2016-07-16 19:06:32,705 INFO  [org.xdi.service.PythonService] (pool-2-thread-2) oxPush2. Initialization
+2016-07-16 19:06:32,713 INFO  [org.xdi.service.PythonService] (pool-2-thread-2) oxPush2. Initialize notification services
+2016-07-16 19:06:32,750 INFO  [org.xdi.service.PythonService] (pool-2-thread-2) oxPush2. Initialized successfully. oneStep: 'False', twoStep: 'True', pushNotifications: 'False'
+</code></pre>
+</li>
+</ol>
+<h3 id="oxtrust-logs">oxTrust logs<a class="headerlink" href="#oxtrust-logs" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p><code>oxtrust.log</code> under <code>/opt/gluu/jetty/identity/logs</code>
+This log gather logs related to Gluu Server Admin panel (called oxTrust). For example, what is the clientID of an oxTrust session? Or, what scopes are being used, etc. In the example below, you can see an admin user has successfuly logged into the <code>test.gluu.org</code> Gluu Server admin panel, has the proper authorizationCode, a redirectURI, and the user's role:</p>
+<pre><code>2016-07-16 16:41:55,690 INFO  [org.gluu.oxtrust.action.Authenticator] authorizationCode : 555a7586-6ca2-4b39-ab39-2ac78ec81524
+2016-07-16 16:41:55,690 INFO  [org.gluu.oxtrust.action.Authenticator]  scopes : user_name email openid profile
+2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] clientID : @!EFCB.890F.FB6C.2603!0001!0A49.F454!0008!F047.7275
+2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] getting accessToken
+2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] tokenURL : https://test.gluu.org/oxauth/seam/resource/restv1/oxauth/token
+2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] Sending request to token endpoint
+2016-07-16 16:41:55,692 INFO  [org.gluu.oxtrust.action.Authenticator] redirectURI : https://test.gluu.org/identity/authentication/authcode
+2016-07-16 16:41:55,919 DEBUG [org.gluu.oxtrust.action.Authenticator]  tokenResponse : org.xdi.oxauth.client.TokenResponse@1914b8d
+</code></pre>
+</li>
+<li>
+<p><code>oxtrust_script.log</code> under <code>/opt/gluu/jetty/identity/logs</code> <br />
+This log collects information on oxTrust related scripts and their operations. For example, if an organization uses a custom attribute which populates values for every user, then the Gluu Server Administrator needs to use a custom script for their 'Cache Refresh' process. This log will receive information when the custom script runs.</p>
+</li>
+<li>
+<p><code>oxtrust_cache_refresh.log</code> under <code>/opt/gluu/jetty/identity/logs</code>  <br />
+Cache Refresh related information such as status, primary failure, etc., is available in this log. In the sample snippet below we see the total number of users that have been synced into the Gluu Server, number of failures, and total number of updated users. </p>
+<pre><code>2016-07-16 17:18:17,691 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Updated person '@!EFCB.890F.FB6C.2603!0001!0A49.F454!0000!40EB.AB8E'
+2016-07-16 17:18:17,691 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Updated '2,002' entries
+2016-07-16 17:18:17,722 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Failed to update '0' entries
+2016-07-16 17:18:17,738 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Keep external persons: 'true'
+2016-07-16 17:18:17,739 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Count entries '0' for removal from target server
+2016-07-16 17:18:17,739 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Removed '0' persons from target server
+2016-07-16 17:18:17,739 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries before updating inum list
+2016-07-16 17:18:17,740 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries after removal '0' entries
+</code></pre>
+</li>
+</ol>
 <h2 id="log-levels">Log Levels<a class="headerlink" href="#log-levels" title="Permanent link">#</a></h2>
-<p>Gluu Server logs use the log4j logging levels which can be changed in the <code>log4j.xml</code> file under the <code>/opt/tomcat/webapps/oxauth/WEB-INF/classes</code> folder.
+<p>Gluu Server logs use the log4j logging levels which can be changed in the <code>log4j.xml</code> file.
 The available logging levels are :</p>
 <table>
 <thead>
@@ -575,36 +677,38 @@ The available logging levels are :</p>
 </tr>
 </tbody>
 </table>
-<p>As mentioned above the <code>log4j.xml</code> contains the log levels. Open the file using the command below</p>
-<pre><code># vi /opt/tomcat/webapps/oxauth/WEB-INF/classes/log4j.xml
+<p>The following files define the log levels in Gluu Server. Please edit the file with the levels given above and restart the <code>jetty</code> server. 
+The following section is taken from a live Gluu Server <code>log4j.xml</code> file showing different log levels for different logs. The changes made this section will reflect in the logs.</p>
+<pre><code>&lt;category name=&quot;org.xdi.oxauth&quot;&gt;
+        &lt;priority value=&quot;TRACE&quot; /&gt;
+    &lt;/category&gt;
+
+    &lt;!- ############### Gluu ################# -&gt;
+    &lt;category name=&quot;org.gluu&quot;&gt;
+        &lt;priority value=&quot;TRACE&quot; /&gt;
+    &lt;/category&gt;
+
+    &lt;!- ############### opnexdi ################# -&gt;
+    &lt;category name=&quot;org.openxdi&quot;&gt;
+        &lt;priority value=&quot;TRACE&quot; /&gt;
+    &lt;/category&gt;
+
+    &lt;!- ############### oxTrust ################# -&gt;
+    &lt;category name=&quot;org.gluu.oxtrust&quot;&gt;
+        &lt;priority value=&quot;TRACE&quot; /&gt;
+    &lt;/category&gt;
+
+    &lt;!- ############### Embedded JBoss AS ################# -&gt;
+    &lt;category name=&quot;org.jboss&quot;&gt;
+        &lt;priority value=&quot;ERROR&quot; /&gt;
+    &lt;/category&gt;
+    &lt;category name=&quot;com.arjuna&quot;&gt;
+        &lt;priority value=&quot;ERROR&quot; /&gt;
+    &lt;/category&gt;
+
 </code></pre>
 
-<p>The log leves are defined under the <code>&lt;level value=" " /&gt;</code> tags which can be changed to one of the above from the table. The following section is taken from a live Gluu Server <code>log4j.xml</code> file showing different log levels for different logs. The changes made this section will reflect in the logs.</p>
-<pre><code> &lt;logger name=&quot;org.xdi.oxauth.service.status.ldap&quot; additivity=&quot;false&quot;&gt;
-        &lt;level value=&quot;INFO&quot;/&gt;
-        &lt;appender-ref ref=&quot;OX_PERSISTENCE_LDAP_STATISTICS_FILE&quot; /&gt;
-    &lt;/logger&gt;
-
-    &lt;logger name=&quot;org.xdi.service.PythonService&quot; additivity=&quot;false&quot;&gt;
-        &lt;level value=&quot;INFO&quot;/&gt;
-        &lt;appender-ref ref=&quot;OX_SCRIPT_LOG_FILE&quot; /&gt;
-    &lt;/logger&gt;
-
-    &lt;logger name=&quot;org.xdi.service.custom.script&quot; additivity=&quot;false&quot;&gt;
-        &lt;level value=&quot;INFO&quot;/&gt;
-        &lt;appender-ref ref=&quot;OX_SCRIPT_LOG_FILE&quot; /&gt;
-    &lt;/logger&gt;
-
-    &lt;logger name=&quot;org.xdi.oxauth.service.custom&quot; additivity=&quot;false&quot;&gt;
-        &lt;level value=&quot;TRACE&quot;/&gt;
-        &lt;appender-ref ref=&quot;OX_SCRIPT_LOG_FILE&quot; /&gt;
-    &lt;/logger&gt;
-</code></pre>
-
-<p>Please restart <code>tomcat</code> after any change in log levels to allow the changes to take effect. Use the following command to restart tomcat:</p>
-<pre><code># service tomcat restart
-</code></pre>
-
+<p>Please restart the specific service after any change in log levels to allow the changes to take effect. Use the following command to restart tomcat:</p>
 <h4 id="system-logs">System logs<a class="headerlink" href="#system-logs" title="Permanent link">#</a></h4>
 <ul>
 <li>For Ubuntu: <code>/var/log/syslog</code></li>
@@ -614,27 +718,6 @@ The available logging levels are :</p>
 <ul>
 <li>For Debian: <code>/var/log/apache2/</code></li>
 <li>For RPM based systems: <code>/var/log/httpd/</code></li>
-</ul>
-<h4 id="core-gluu-server-logs">Core Gluu Server logs<a class="headerlink" href="#core-gluu-server-logs" title="Permanent link">#</a></h4>
-<ul>
-<li><code>opt/tomcat/logs/</code></li>
-</ul>
-<h4 id="saml-transaction-related-logs">SAML transaction related logs<a class="headerlink" href="#saml-transaction-related-logs" title="Permanent link">#</a></h4>
-<ul>
-<li><code>/opt/idp/logs/</code></li>
-</ul>
-<h4 id="ldap-logs">LDAP logs<a class="headerlink" href="#ldap-logs" title="Permanent link">#</a></h4>
-<ul>
-<li><code>/opt/opendj/logs/</code></li>
-</ul>
-<h4 id="miscellaneous-logs">Miscellaneous logs<a class="headerlink" href="#miscellaneous-logs" title="Permanent link">#</a></h4>
-<ul>
-<li><code>/var/logs/</code></li>
-</ul>
-<h4 id="to-escalate-the-log-levels">To escalate the log levels<a class="headerlink" href="#to-escalate-the-log-levels" title="Permanent link">#</a></h4>
-<ul>
-<li>OpenID Connect or any core logging: <code>log4j.xml</code>, which is located in <code>/opt/tomcat/webapps/oxauth/WEB-INF/classes/</code></li>
-<li>SAML logging: <code>logging.xml</code>, which is located in <code>/opt/idp.conf/</code></li>
 </ul>
 <h2 id="system-logs_1">System Logs<a class="headerlink" href="#system-logs_1" title="Permanent link">#</a></h2>
 <p>Sometimes it worthy to check system logs like <code>/var/log/messages</code>. These logs contain global system messages.</p>
@@ -671,300 +754,6 @@ test.gluu.org:443 192.168.201.1 - - [17/Jul/2016:18:25:56 +0000] "GET /oxauth/au
     [Thu Jul 14 23:49:20 2016] [error] ajp_read_header: ajp_ilink_receive failed
     [Thu Jul 14 23:49:20 2016] [error] (70007)The timeout specified has expired: proxy: read response failed from (null) (localhost)
 </code></pre>
-<h2 id="core-logs">Core logs<a class="headerlink" href="#core-logs" title="Permanent link">#</a></h2>
-<h3 id="oxauth-logs">oxAuth logs<a class="headerlink" href="#oxauth-logs" title="Permanent link">#</a></h3>
-<ol>
-<li>
-<p><code>oxauth.log</code>    <br />
-This log is gathering most of the authentication related information. Generally this is the first log to review for any authentication-related troubleshooting, like authentication failure or missing clients etc. Here's an example showing a successful user authentication:</p>
-<pre><code>2016-07-16 15:43:28,232 INFO  [org.xdi.oxauth.auth.Authenticator] Authentication success for Client: '@!EFCB.890F.FB6C.2603!0001!0A49.F454!0008!F047.7275'
-2016-07-16 15:43:28,232 TRACE [org.xdi.oxauth.auth.Authenticator] Authentication successfully for '@!EFCB.890F.FB6C.2603!0001!0A49.F454!0008!F047.7275'
-2016-07-16 15:43:28,238 DEBUG [xdi.oxauth.token.ws.rs.TokenRestWebServiceImpl] Attempting to request access token: grantType = authorization_code, code = 61ba3c0d-42c4-4f1f-8420-fd5f6707f1b1, redirectUri = https://test.gluu.org/identity/authentication/authcode, username = null, refreshToken = null, clientId = null, ExtraParams = {grant_type=[Ljava.lang.String;@1add2a62, redirect_uri=[Ljava.lang.String;@2e0995b5, code=[Ljava.lang.String;@7743b5af}, isSecure = true, codeVerifier = null
-2016-07-16 15:43:28,249 DEBUG [org.xdi.oxauth.service.UserService] Getting user information from LDAP: userId = zico
-</code></pre>
-</li>
-<li>
-<p><code>oxauth_script.log</code>   <br />
-Most of the custom script's initialization and few more information are loaded here in this script. In the sample log below we can see 'Super Gluu' 2FA has been loaded in the Gluu Server:</p>
-<pre><code>2016-07-16 19:06:32,705 INFO  [org.xdi.service.PythonService] (pool-2-thread-2) oxPush2. Initialization
-2016-07-16 19:06:32,713 INFO  [org.xdi.service.PythonService] (pool-2-thread-2) oxPush2. Initialize notification services
-2016-07-16 19:06:32,750 INFO  [org.xdi.service.PythonService] (pool-2-thread-2) oxPush2. Initialized successfully. oneStep: 'False', twoStep: 'True', pushNotifications: 'False'
-</code></pre>
-</li>
-</ol>
-<h3 id="oxtrust-logs">oxTrust logs<a class="headerlink" href="#oxtrust-logs" title="Permanent link">#</a></h3>
-<ol>
-<li>
-<p><code>oxtrust.log</code>   <br />
-This log gather logs related to Gluu Server Admin panel (called oxTrust). For example, what is the clientID of an oxTrust session? Or, what scopes are being used, etc. In the example below, you can see an admin user has successfuly logged into the <code>test.gluu.org</code> Gluu Server admin panel, has the proper authorizationCode, a redirectURI, and the user's role:</p>
-<pre><code>2016-07-16 16:41:55,690 INFO  [org.gluu.oxtrust.action.Authenticator] authorizationCode : 555a7586-6ca2-4b39-ab39-2ac78ec81524
-2016-07-16 16:41:55,690 INFO  [org.gluu.oxtrust.action.Authenticator]  scopes : user_name email openid profile
-2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] clientID : @!EFCB.890F.FB6C.2603!0001!0A49.F454!0008!F047.7275
-2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] getting accessToken
-2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] tokenURL : https://test.gluu.org/oxauth/seam/resource/restv1/oxauth/token
-2016-07-16 16:41:55,691 INFO  [org.gluu.oxtrust.action.Authenticator] Sending request to token endpoint
-2016-07-16 16:41:55,692 INFO  [org.gluu.oxtrust.action.Authenticator] redirectURI : https://test.gluu.org/identity/authentication/authcode
-2016-07-16 16:41:55,919 DEBUG [org.gluu.oxtrust.action.Authenticator]  tokenResponse : org.xdi.oxauth.client.TokenResponse@1914b8d
-2016-07-16 16:41:55,920 DEBUG [org.gluu.oxtrust.action.Authenticator]  tokenResponse.getErrorType() : null
-2016-07-16 16:41:55,921 DEBUG [org.gluu.oxtrust.action.Authenticator]  accessToken : d39bd11c-7bc0-45e1-b772-2d0a5f74e6fb
-2016-07-16 16:41:55,921 DEBUG [org.gluu.oxtrust.action.Authenticator]  validating AccessToken
-2016-07-16 16:41:56,004 DEBUG [org.gluu.oxtrust.action.Authenticator]  response3.getStatus() : 200
-2016-07-16 16:41:56,004 DEBUG [org.gluu.oxtrust.action.Authenticator] validate check session status:200
-2016-07-16 16:41:56,004 INFO  [org.gluu.oxtrust.action.Authenticator] Session validation successful. User is logged in
-2016-07-16 16:41:56,108 INFO  [org.gluu.oxtrust.action.Authenticator] user uid:admin
-2016-07-16 16:41:56,119 INFO  [org.gluu.oxtrust.action.Authenticator] Authenticating user 'admin'
-2016-07-16 16:41:56,125 DEBUG [org.gluu.oxtrust.action.Authenticator] Configuring application after user 'admin' login
-</code></pre>
-</li>
-<li>
-<p><code>oxtrust_script.log</code>   <br />
-This log collects information on oxTrust related scripts and their operations. For example, if an organization uses a custom attribute which populates values for every user, then the Gluu Server Administrator needs to use a custom script for their 'Cache Refresh' process. This log will receive information when the custom script runs.</p>
-</li>
-<li>
-<p><code>oxtrust_cache_refresh.log</code>  <br />
-Cache Refresh related information is available here, such as Status, Primary failure etc. In the sample snippet below we are seeing the status of users that have been synced into Gluu Server, number of failures, and total number of updated users.</p>
-<pre><code>2016-07-16 17:18:17,691 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Updated person '@!EFCB.890F.FB6C.2603!0001!0A49.F454!0000!40EB.AB8E'
-2016-07-16 17:18:17,691 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Updated '2,002' entries
-2016-07-16 17:18:17,722 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Failed to update '0' entries
-2016-07-16 17:18:17,738 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Keep external persons: 'true'
-2016-07-16 17:18:17,739 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Count entries '0' for removal from target server
-2016-07-16 17:18:17,739 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Removed '0' persons from target server
-2016-07-16 17:18:17,739 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries before updating inum list
-2016-07-16 17:18:17,740 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries after removal '0' entries
-</code></pre>
-</li>
-</ol>
-<h3 id="wrapper-logs">Wrapper logs<a class="headerlink" href="#wrapper-logs" title="Permanent link">#</a></h3>
-<ol>
-<li>
-<p><code>catalina.log</code>  <br />
-A standard servlet contianer log. For example: </p>
-<pre><code>Jul 16, 2016 7:06:26 PM com.sun.faces.renderkit.html_basic.HtmlBasicRenderer getForComponent
-WARNING: Unable to find component with ID j_idt244 in view.
-Jul 16, 2016 7:06:26 PM com.sun.faces.renderkit.html_basic.HtmlBasicRenderer getForComponent
-WARNING: Unable to find component with ID j_idt244 in view.
-Jul 16, 2016 7:06:26 PM com.sun.faces.renderkit.html_basic.HtmlBasicRenderer getForComponent
-WARNING: Unable to find component with ID j_idt244 in view.
-Jul 16, 2016 7:06:26 PM com.sun.faces.renderkit.html_basic.HtmlBasicRenderer getForComponent
-WARNING: Unable to find component with ID j_idt244 in view.
-Jul 16, 2016 7:06:26 PM com.sun.faces.renderkit.html_basic.HtmlBasicRenderer getForComponent
-WARNING: Unable to find component with ID j_idt244 in view.
-Jul 16, 2016 7:06:26 PM com.sun.faces.renderkit.html_basic.HtmlBasicRenderer getForComponent
-WARNING: Unable to find component with ID j_idt244 in view.
-</code></pre>
-</li>
-<li>
-<p><code>localhost.log</code>   <br />
-Standard logs on web applications. For example: </p>
-<pre><code>Jul 16, 2016 3:33:31 PM org.apache.catalina.core.ApplicationContext log
-INFO: Closing Spring root WebApplicationContext
-Jul 16, 2016 3:33:32 PM org.apache.catalina.core.ApplicationContext log
-INFO: Closing Spring root WebApplicationContext
-Jul 16, 2016 3:37:27 PM org.apache.catalina.core.ApplicationContext log
-INFO: Initializing Spring root WebApplicationContext
-Jul 16, 2016 3:37:42 PM org.apache.catalina.core.ApplicationContext log
-INFO: No Spring WebApplicationInitializer types detected on classpath
-Jul 16, 2016 3:37:43 PM org.apache.catalina.core.ApplicationContext log
-INFO: Initializing Spring root WebApplicationContext
-Jul 16, 2016 3:37:54 PM org.apache.catalina.core.ApplicationContext log
-INFO: Initializing Spring FrameworkServlet 'cas'
-</code></pre>
-</li>
-<li>
-<p><code>wrapper.log</code>   <br />
-This log is the godfather of all Gluu Server logs, accounting for roughly 95% of log information. As you can see in the example snippet below, this log is showing that one CAS module loaded, one user is trying to authenticate, there's a search happening for this user in LDAP, etc.:</p>
-<pre><code>INFO   | jvm 1    | 2016/07/16 19:17:48 | 2016-07-16 19:17:48,855 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - &lt;Reloading registered services.&gt;
-INFO   | jvm 1    | 2016/07/16 19:17:48 | 2016-07-16 19:17:48,855 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - &lt;Loaded 1 services.&gt;
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,835 TRACE [org.xdi.oxauth.service.SessionStateService] Found session_state cookie: '2f73dc6e-7421-48ff-9b49-7c59565bfe50'
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,838 TRACE [org.xdi.oxauth.service.SessionStateService] Try to get session by id: 2f73dc6e-7421-48ff-9b49-7c59565bfe50 ...
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,838 TRACE [org.xdi.oxauth.service.SessionStateService] Session dn: uniqueIdentifier=2f73dc6e-7421-48ff-9b49-7c59565bfe50,ou=session,o=@!EFCB.890F.FB6C.2603!0001!0A49.F454,o=gluu
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,839 DEBUG [org.xdi.oxauth.service.external.ExternalAuthenticationService] Executing python 'authenticate' authenticator method
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,840 DEBUG [org.xdi.oxauth.service.AuthenticationService] Authenticating user with LDAP: username: support@gluu.org
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,840 DEBUG [org.xdi.oxauth.service.AuthenticationService] Attempting to find userDN by primary key: 'mail' and key value: 'support@gluu.org'
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,840 DEBUG [org.xdi.oxauth.service.AuthenticationService] Getting user information from LDAP: attributeName = 'mail', attributeValue = 'support@gluu.org'
-INFO   | jvm 1    | 2016/07/16 19:17:51 | 2016-07-16 19:17:51,844 DEBUG [org.xdi.oxauth.service.AuthenticationService] Found '2' entries
-</code></pre>
-</li>
-</ol>
-<h3 id="cache-refresh-logs">Cache Refresh logs<a class="headerlink" href="#cache-refresh-logs" title="Permanent link">#</a></h3>
-<ol>
-<li><code>oxtrust_cache_refresh.log</code>     </li>
-</ol>
-<p>Cache Refresh related information such as status, primary failure, etc., is available in this log. In the sample snippet below we see the total number of users that have been synced into the Gluu Server, number of failures, and total number of updated users. </p>
-<pre><code>    2016-07-16 17:18:17,691 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Updated person '@!EFCB.890F.FB6C.2603!0001!0A49.F454!0000!40EB.AB8E'
-    2016-07-16 17:18:17,691 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Updated '2,002' entries
-    2016-07-16 17:18:17,722 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Failed to update '0' entries
-    2016-07-16 17:18:17,738 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Keep external persons: 'true'
-    2016-07-16 17:18:17,739 DEBUG [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Count entries '0' for removal from target server
-    2016-07-16 17:18:17,739 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) Removed '0' persons from target server
-    2016-07-16 17:18:17,739 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries before updating inum list
-    2016-07-16 17:18:17,740 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries after removal '0' entries
-</code></pre>
-<h3 id="cas-logs">CAS logs<a class="headerlink" href="#cas-logs" title="Permanent link">#</a></h3>
-<ol>
-<li><code>cas.log</code>    </li>
-</ol>
-<p>If oxCAS is enabled in the Gluu Server then this log will have information about any CAS transactions. In the example snippet below, we see a CAS service validate a response from the Gluu Server:</p>
-<pre><code>    2016-07-16 15:50:39,211 DEBUG [org.jasig.cas.web.ServiceValidateController] - Successfully validated service ticket ST-237741-1LZ4eWcHvBS75FAXTICY-myldap.gluu.org for service [https://testcas1.gluu.org/c?pkg=https://testcas1.gluu.org/portal.p_redirect]
-    2016-07-16 15:50:39,211 DEBUG [org.jasig.cas.support.saml.authentication.principal.SamlService] - Attempted to extract Request from HttpServletRequest. Results:
-    2016-07-16 15:50:39,211 DEBUG [org.jasig.cas.support.saml.authentication.principal.SamlService] - Request Body:
-    2016-07-16 15:50:39,211 DEBUG [org.jasig.cas.support.saml.authentication.principal.SamlService] - Extracted ArtifactId: null
-    2016-07-16 15:50:39,211 DEBUG [org.jasig.cas.support.saml.authentication.principal.SamlService] - Extracted Request Id: null
-    2016-07-16 15:50:39,211 DEBUG [org.jasig.cas.support.saml.web.support.SamlArgumentExtractor] - Extractor generated service for: https://testcas1.gluu.org/c/?pkg=https://testcas1.gluu.org/portal.p_redirect
-    2016-07-16 15:50:41,878 DEBUG [org.jasig.cas.web.support.CasArgumentExtractor] - Extractor generated service for: https://testcas1.gluu.org/c/
-    2016-07-16 15:50:41,880 DEBUG [org.jasig.cas.ticket.registry.MemCacheTicketRegistry] - Updating ticket ST-237742-beBEaYMCtoiRJBCYJLKt-myldap.gluu.org
-    2016-07-16 15:50:41,882 DEBUG [org.jasig.cas.services.support.RegisteredServiceDefaultAttributeFilter] - Found attribute [uid] in the list of allowed attributes for service [zico]
-    2016-07-16 15:50:41,882 DEBUG [org.jasig.cas.services.support.RegisteredServiceDefaultAttributeFilter] - Found attribute [sn] in the list of allowed attributes for service [mohib]
-    2016-07-16 15:50:41,882 DEBUG [org.jasig.cas.CentralAuthenticationServiceImpl] - Principal id to return for service [mohib zico] is [mzico]. The default principal id is [mzico].
-    2016-07-16 15:50:41,883 DEBUG [org.jasig.cas.ticket.registry.MemCacheTicketRegistry] - Deleting ticket         ST-237742-beBEaYMCtoiRJBCYJLKt-myldap.gluu.org
-    2016-07-16 15:50:41,884 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
-    =============================================================
-    WHO: audit:unknown
-    WHAT: ST-237742-beBEaYMCtoiRJBCYJLKt-myldap.gluu.org
-    ACTION: SERVICE_TICKET_VALIDATED
-    APPLICATION: CAS
-    WHEN: Sat Jul 16 15:50:41 EDT 2016
-    CLIENT IP ADDRESS: 192.168.1.2
-    SERVER IP ADDRESS: test.gluu.org
-    =============================================================
-</code></pre>
-<h3 id="asimba-logs">Asimba logs<a class="headerlink" href="#asimba-logs" title="Permanent link">#</a></h3>
-<ol>
-<li><code>wrapper.log</code>     </li>
-</ol>
-<p>Any Asimba SAML proxy transactions are logged in <code>wrapper.log</code>. In the below example we see the requestor (from where the SSO request is coming), we see the SAML proxy server's information (<code>test.gluu.org</code>), and the authentication server (<code>nest.gluu.org</code>) which is performing the authentication, releasing attributes, etc. </p>
-<pre><code>    INFO   | jvm 1    | 2016/07/17 15:40:33 | (ASIMBAWA) [2016-07-17 15:40:33] [DEBUG] WebBrowserSSO &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:33 | &lt;samlp:AuthnRequest
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     AssertionConsumerServiceURL="https://sp.gluu.org/Shibboleth.sso/SAML2/POST"
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     Destination="https://test.gluu.org/asimba/profiles/saml2/sso/web"
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     ID="_a5704abd6d2f2e5b0eba5a1671f6c658"
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     IssueInstant="2016-07-17T15:40:33Z"
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     Version="2.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     &lt;saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"&gt;https://sp.gluu.org/shibboleth&lt;/saml:Issuer&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |     &lt;samlp:NameIDPolicy AllowCreate="1"/&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:33 | &lt;/samlp:AuthnRequest&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:33 |
-    INFO   | jvm 1    | 2016/07/17 15:40:33 | (ASIMBAWA) [2016-07-17 15:40:33] [DEBUG] WebBrowserSSO Put on map? urlpath.context=web 
-    ......................
-    ......................
-    ......................
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [DEBUG] WebBrowserSSOProfile Request recieved: https://test.gluu.org/asimba/sso/web
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [DEBUG] SAML2IDP Creating new MetadataProvider from configured source for SAML2 IDP 'https://nest.gluu.org/idp/shibboleth'
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [INFO] NamedFilesystemMetadataProvider Created for file with name /opt/tomcat/webapps/asimba/WEB-INF/sample-data/idp/2185528996791210207.xml
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [INFO] AbstractReloadingMetadataProvider New metadata succesfully loaded for '/opt/tomcat/webapps/asimba/WEB-INF/sample-data/idp/2185528996791210207.xml'
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [INFO] AbstractReloadingMetadataProvider Next refresh cycle for metadata provider '/opt/tomcat/webapps/asimba/WEB-INF/sample-data/idp/2185528996791210207.xml' will occur on '2016-07-17T18:40:37.746Z' ('2016-07-17T18:40:37.746Z' local time)
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [DEBUG] StandardMetadataProviderManager No EntitiesDescriptor was returned, so no IDPList to create.
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [DEBUG] WebBrowserSSOProfile Using binding: urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [DEBUG] SAML2IDP Returning existing MetadataProvider for SAML2 IDP 'https://nest.gluu.org/idp/shibboleth'
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [INFO] MemorySessionFactory Existing session(s) updated: fQUnP-s1K_fdxK2wdLjp4A for requestor 'https://sp.gluu.org/shibboleth'
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | (ASIMBAWA) [2016-07-17 15:40:37] [DEBUG] AbstractAuthNMethodSAML2Profile &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 | &lt;saml2p:AuthnRequest AssertionConsumerServiceIndex="0"
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |     Destination="https://nest.gluu.org/idp/profile/SAML2/POST/SSO"
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |     ForceAuthn="false"
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |     ID="_ee01f578f94409aa41af080cc74787b8fQUnP-s1K_fdxK2wdLjp4A"
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |     IssueInstant="2016-07-17T15:40:37.771Z" ProviderName="Sp.gluu.org"
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |     Version="2.0" xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol"&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |     &lt;saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"&gt;https://test.gluu.org/asimba/profiles/saml2&lt;/saml2:Issuer&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |     &lt;ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |         &lt;ds:SignedInfo&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |             &lt;ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |             &lt;ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |             &lt;ds:Reference URI="#_ee01f578f94409aa41af080cc74787b8fQUnP-s1K_fdxK2wdLjp4A"&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |                 &lt;ds:Transforms&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |                     &lt;ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |                     &lt;ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |                 &lt;/ds:Transforms&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |                 &lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |                 &lt;ds:DigestValue&gt;okTsHKhXes6hA7cKbLjsBwFZhtM=&lt;/ds:DigestValue&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |             &lt;/ds:Reference&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:37 |         &lt;/ds:SignedInfo&gt;
-    ............................INFO   | jvm 1    | 2016/07/17 15:40:56 |             &lt;saml2:Attribute FriendlyName="uid"
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                 Name="urn:oid:0.9.2342.19200300.100.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                 &lt;saml2:AttributeValue
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;admin&lt;/saml2:AttributeValue&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |             &lt;/saml2:Attribute&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |             &lt;saml2:Attribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                 &lt;saml2:AttributeValue
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;User&lt;/saml2:AttributeValue&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |             &lt;/saml2:Attribute&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |             &lt;saml2:Attribute FriendlyName="givenName"
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                 Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                 &lt;saml2:AttributeValue
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;Admin&lt;/saml2:AttributeValue&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |             &lt;/saml2:Attribute&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |         &lt;/saml2:AttributeStatement&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |     &lt;/saml2:Assertion&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 | &lt;/saml2p:Response&gt;
-    INFO   | jvm 1    | 2016/07/17 15:40:56 |
-</code></pre>
-<h2 id="saml-logs">SAML logs<a class="headerlink" href="#saml-logs" title="Permanent link">#</a></h2>
-<ol>
-<li>
-<p><code>idp-access.log</code>   <br />
-Each time the IDP is accessed a log entry is made detailing whether or not information sent back. These messages include request time, remote host making the rreuqest, server host name and port, and the request path. This log is written in the machine parsable format:</p>
-<pre><code>20160717T162519Z|192.168.201.1|test.gluu.org:443|/profile/SAML2/Redirect/SSO|
-</code></pre>
-</li>
-<li>
-<p><code>idp-process.log</code>  <br />
-This is one of the most important logs for SAML transactions in the Gluu Server. It includes the Issuer's information, released attributes, certificate information etc. Here's an example: </p>
-<pre><code> &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;saml2p:Response
-    Destination="https://sp.gluu.org/Shibboleth.sso/SAML2/POST"
-    ID="_322f0ff5e516e8ecb3b7ecd21aaf457c"
-    InResponseTo="_a05a4d01389b7904c7e4d40a4d099285"
-    IssueInstant="2016-07-17T16:25:19.165Z" Version="2.0" xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol"&gt;
-    &lt;saml2:Issuer
-        Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"&gt;https://test.gluu.org/idp/shibboleth&lt;/saml2:Issuer&gt;
-    &lt;ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
-        &lt;ds:SignedInfo&gt;
-...................
-...................
-...................
-eLiXH2CuvJrwkHhcSQSyKAs4WPXbLE5hhzEd9GGRmiovGmdZJvDU5zRX74m80GcL0d+mf6WzLRZBVmcPcs/2Dk1+J2Sw67W0DF0vgpoDvhgKHMdkKI8Ex
-Z38cVHo1xJqpQvUq0StjGPgdRBWUJoMe4BVRD8sM7BDbjFoY5H3TJxzYbnjsxwDZaqIZQt+4=&lt;/xenc:CipherValue&gt;
-            &lt;/xenc:CipherData&gt;
-        &lt;/xenc:EncryptedData&gt;
-    &lt;/saml2:EncryptedAssertion&gt;
-&lt;/saml2p:Response&gt;
-
-16:25:19.395 - INFO [Shibboleth-Audit:1028] - 20160717T162519Z|urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect|_a05a4d01389b7904c7e4d40a4d099285|https://sp.gluu.org/shibboleth|urn:mace:shibboleth:2.0:profiles:saml2:sso|https://test.gluu.org/idp/shibboleth|urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST|_322f0ff5e516e8ecb3b7ecd21aaf457c|admin|urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport|uid,mail,sn,givenName,|||
-</code></pre>
-</li>
-</ol>
-<h2 id="ldap-logs_1">LDAP logs<a class="headerlink" href="#ldap-logs_1" title="Permanent link">#</a></h2>
-<ol>
-<li>
-<p><code>access.log</code>   <br />
-<code>access.log</code> is in active mode all the time. The <code>access.log</code> messages provide information about the types of LDAP operations processed by the Gluu Server.</p>
-</li>
-<li>
-<p><code>audit.log</code>  <br />
-All changes / modifications of LDAP server are being logged here in audit log.</p>
-</li>
-<li>
-<p><code>errors.log</code>  <br />
-LDAP server startup and shutdown related information are available in <code>errors.log</code>.</p>
-</li>
-</ol>
-<p>=======
-logs.md for Auth Management</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>aa935adcda228d7539f9d75223d62e64c34e4e57</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using
@@ -981,7 +770,7 @@ logs.md for Auth Management</p>
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../user-group/" title="Manage & Configure Users">
+        <a href="../user-group/" title="User Management">
           <span class="direction">
             Previous
           </span>
@@ -991,7 +780,7 @@ logs.md for Auth Management</p>
             </div>
             <div class="stretch">
               <div class="title">
-                Manage & Configure Users
+                User Management
               </div>
             </div>
           </div>
@@ -1000,14 +789,14 @@ logs.md for Auth Management</p>
     </div>
     <div class="next">
       
-        <a href="../clients/" title="Configure and Manage OpenID Clients">
+        <a href="../clients/" title="OpenID Clients">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Configure and Manage OpenID Clients
+                OpenID Clients
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

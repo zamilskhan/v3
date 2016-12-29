@@ -240,8 +240,8 @@
       
         
   <li>
-    <a class="" title="Configuring Multi-Factor Authentication" href="../multi-factor-auth/">
-      Configuring Multi-Factor Authentication
+    <a class="" title="Multi-Factor Authentication" href="../multi-factor-auth/">
+      Multi-Factor Authentication
     </a>
     
   </li>
@@ -249,8 +249,8 @@
       
         
   <li>
-    <a class="" title="Manage & Configure Users" href="../user-group/">
-      Manage & Configure Users
+    <a class="" title="User Management" href="../user-group/">
+      User Management
     </a>
     
   </li>
@@ -267,8 +267,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage OpenID Clients" href="../clients/">
-      Configure and Manage OpenID Clients
+    <a class="" title="OpenID Clients" href="../clients/">
+      OpenID Clients
     </a>
     
   </li>
@@ -276,8 +276,8 @@
       
         
   <li>
-    <a class="" title="Configure and Manage SAML SSO" href="../saml/">
-      Configure and Manage SAML SSO
+    <a class="" title="SAML SSO" href="../saml/">
+      SAML SSO
     </a>
     
   </li>
@@ -359,30 +359,11 @@
         <ul>
           
             <li class="anchor">
-              <a title="Tar command to Back up Gluu Server" href="#tar-command-to-back-up-gluu-server">
-                <b>Tar command to Back up Gluu Server</b>
+              <a title="Tarball Method" href="#tarball-method">
+                <b>Tarball Method</b>
               </a>
             </li>
             
-              <li class="anchor">
-              <a title="Steps to Back up Gluu CE server using tar" href="#steps-to-back-up-gluu-ce-server-using-tar">
-                  <font size=2><i>Steps to Back up Gluu CE server using tar</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="Using Gluu Script to Back up Ldif of LDAP" href="#using-gluu-script-to-back-up-ldif-of-ldap">
-                <b>Using Gluu Script to Back up Ldif of LDAP</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Steps to Back up Gluu CE Server using Gluu Export Scripts" href="#steps-to-back-up-gluu-ce-server-using-gluu-export-scripts">
-                  <font size=2><i>Steps to Back up Gluu CE Server using Gluu Export Scripts</i></font>
-              </a>
-            </li>
-             
           
         </ul>
       
@@ -403,15 +384,6 @@
   <li>
     <a class="" title="Certificate Management" href="../certificate/">
       Certificate Management
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Fine Tuning Gluu Server" href="../fine-tuning/">
-      Fine Tuning Gluu Server
     </a>
     
   </li>
@@ -440,34 +412,34 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="how-to-back-up-gluu-ce-server">How to back up Gluu CE Server<a class="headerlink" href="#how-to-back-up-gluu-ce-server" title="Permanent link">#</a></h1>
-<p>Gluu CE Server Back up can be performed using below methods.</p>
+          <h1 id="gluu-server-backup">Gluu Server Backup<a class="headerlink" href="#gluu-server-backup" title="Permanent link">#</a></h1>
+<p>There methods of backing up Gluu Server CE is given below:</p>
 <ul>
-<li>Using tar command to tar the Gluu Server Folder from the Host OS</li>
-<li>Using Gluu provided export and import scripts to back up ldif of the LDAP.</li>
+<li>Tarball Method: using <code>tar</code> command to tarball the entire Gluu Server CE <code>chroot</code> folder</li>
 </ul>
-<blockquote>
-<p>NOTE: In this documentation,'2.4.x' is referred to the existing installed version of Gluu CE Server. </p>
-</blockquote>
-<h2 id="tar-command-to-back-up-gluu-server">Tar command to Back up Gluu Server<a class="headerlink" href="#tar-command-to-back-up-gluu-server" title="Permanent link">#</a></h2>
-<h3 id="steps-to-back-up-gluu-ce-server-using-tar">Steps to Back up Gluu CE server using tar<a class="headerlink" href="#steps-to-back-up-gluu-ce-server-using-tar" title="Permanent link">#</a></h3>
-<pre><code>1. Stop the server using below command
-    a. #service gluu-server-2.4.x stop
-2. use tar command to take a back up
-    b. # tar cvf gluu244-backup.tar /opt/gluu-server-2.4.4/
-</code></pre>
-<h2 id="using-gluu-script-to-back-up-ldif-of-ldap">Using Gluu Script to Back up Ldif of LDAP<a class="headerlink" href="#using-gluu-script-to-back-up-ldif-of-ldap" title="Permanent link">#</a></h2>
-<h3 id="steps-to-back-up-gluu-ce-server-using-gluu-export-scripts">Steps to Back up Gluu CE Server using Gluu Export Scripts<a class="headerlink" href="#steps-to-back-up-gluu-ce-server-using-gluu-export-scripts" title="Permanent link">#</a></h3>
-<pre><code>1. Login to Gluu chroot
-    a. # service gluu-server-2.4.x login
+<!-- * Scritp Method : using the provided export and import scripts to back up ldif of the LDAP. -->
+
+<h2 id="tarball-method">Tarball Method<a class="headerlink" href="#tarball-method" title="Permanent link">#</a></h2>
+<ol>
+<li>Stop the server using below command
+    a. #service gluu-server-3.0.0 stop</li>
+<li>use tar command to take a back up
+    b. # tar cvf gluu244-backup.tar /opt/gluu-server-3.0.0/</li>
+</ol>
+<!--
+## Script Method
+
+1. Login to Gluu chroot
+    a. # service gluu-server-3.0.0 login
 2. Fetch export script from Gluu 
     b. wget https://raw.githubusercontent.com/GluuFederation/community-edition-setup/master/static/scripts/export24.py
 3. Change permission of the script
     c. # chmod +x export24.py
 4. run the script
     d. # ./export24.py
-</code></pre>
-<p>The export script will generate a directory called  backup_24  which will have all the data backed up from the current installation. Check the log file generated in the directory for any errors.</p>
+
+The export script will generate a directory called  backup_24  which will have all the data backed up from the current installation. Check the log file generated in the directory for any errors.
+-->
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using

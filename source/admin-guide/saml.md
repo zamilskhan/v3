@@ -8,22 +8,18 @@ Outbound SAML can also be called SP-initiated Single Sign On (SSO) or traditiona
 ### Trust Relationship Requirements
 Trust Relationship requires the infomation listed below.
 
-- [Metadata of website](#metadata-of-website)
-- [Required attribute of website](#required-attribute-of-website)
-- [SSO testing endpoint of website](#sso-testing-endpoint-of-website)
-
-### Metadata of the SP
+**Metadata of the SP**
 Metadata is a XML file which has configuration data used to provision any website (SP) or IDP (Gluu Server) to communicate with each other. It is interchangeable between the IDP and the SP.
 
 Websites (SP) can provide metadata via URL or as a separate file.
 
-### Required Attributes
+**Required Attributes**
 Every organization has their own policy to release/share attributes with
 any IDP or SP. The oxTrust GUI supports both preconfigured and custom attribute
 Release to the SP. The administrator only needs to click on the desired 
 attribute and it will be released to the SP.
 
-### SSO Testing Endpoint
+**SSO Testing Endpoint**
 Every website (SP) should have both a staging and a production URI
 endpoint which can be checked for SSO, where the user will access to log
 into that SP.
